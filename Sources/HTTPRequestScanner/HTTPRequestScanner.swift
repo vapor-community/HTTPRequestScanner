@@ -16,7 +16,7 @@ public struct HTTPRequestScanner {
     public var onHeaderKey: (UnsafeBufferPointer<UInt8>) -> Void = {_ in}
     
     /// Called on a data chunk scanned from one of the route's header keys.
-    var onHeaderValue: (UnsafeBufferPointer<UInt8>) -> Void = {_ in}
+    public var onHeaderValue: (UnsafeBufferPointer<UInt8>) -> Void = {_ in}
     
     /// Called when the header scanning is finished.
     public var onHeadersComplete: () -> Void = {}
