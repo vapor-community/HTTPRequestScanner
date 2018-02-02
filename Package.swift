@@ -6,9 +6,10 @@ let package = Package(
         .library(name: "HTTPRequestScanner", targets: ["HTTPRequestScanner"]),
     ],
     dependencies: [
+        .package(url: "https://github.com/vapor/async.git", .branch("beta"))
     ],
     targets: [
-        .target(name: "HTTPRequestScanner", dependencies: []),
+        .target(name: "HTTPRequestScanner", dependencies: ["Async"]),
         .testTarget(name: "HTTPRequestScannerTests", dependencies: ["HTTPRequestScanner"]),
     ]
 )
