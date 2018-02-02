@@ -3,6 +3,9 @@ import Async
 /// Scans an incoming HTTP request as a `ByteParserStream`.
 public struct HTTPRequestScanner {
     
+    /// The current location in the request that is being scanned.
+    private var state: State
+    
     /// Called on a data chunk scanned from the request's method.
     public var onMethod: (UnsafeBufferPointer<UInt8>) -> Void = {_ in}
     
