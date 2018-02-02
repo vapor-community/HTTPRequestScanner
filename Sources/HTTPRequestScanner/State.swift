@@ -3,4 +3,5 @@ internal enum State {
     case statusCode
     case path
     case headerKey
+    case headerValue
 }
