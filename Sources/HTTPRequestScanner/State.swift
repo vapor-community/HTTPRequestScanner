@@ -1,4 +1,5 @@
 internal enum State {
+    case waiting
     case method
     case statusCode
     case path
