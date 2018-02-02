@@ -5,4 +5,5 @@ internal enum State {
     case headerKey
     case headerValue
     case body
+    case complete
 }
