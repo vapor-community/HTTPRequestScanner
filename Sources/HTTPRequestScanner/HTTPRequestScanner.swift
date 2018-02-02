@@ -4,26 +4,26 @@ import Async
 public struct HTTPRequestScanner {
     
     /// Called on a data chunk scanned from the request's method.
-    var onMethod: (UnsafeBufferPointer<UInt8>) -> Void = {_ in}
+    public var onMethod: (UnsafeBufferPointer<UInt8>) -> Void = {_ in}
     
     /// Called on a data chunk scanned from the request's status code.
-    var onStatusCode: (UnsafeBufferPointer<UInt8>) -> Void = {_ in}
+    public var onStatusCode: (UnsafeBufferPointer<UInt8>) -> Void = {_ in}
     
     /// Called on a data chunk scanned from the request's route path.
-    var onPath: (UnsafeBufferPointer<UInt8>) -> Void = {_ in}
+    public var onPath: (UnsafeBufferPointer<UInt8>) -> Void = {_ in}
     
     /// Called on a data chunk scanned from one of the route's header keys.
-    var onHeaderKey: (UnsafeBufferPointer<UInt8>) -> Void = {_ in}
+    public var onHeaderKey: (UnsafeBufferPointer<UInt8>) -> Void = {_ in}
     
     /// Called on a data chunk scanned from one of the route's header keys.
     var onHeaderValue: (UnsafeBufferPointer<UInt8>) -> Void = {_ in}
     
     /// Called when the header scanning is finished.
-    var onHeadersComplete: () -> Void = {}
+    public var onHeadersComplete: () -> Void = {}
     
     /// Called on a data chunk scanned from the request's body.
-    var onBody: (UnsafeBufferPointer<UInt8>) -> Void = {_ in}
+    public var onBody: (UnsafeBufferPointer<UInt8>) -> Void = {_ in}
     
     /// Called when the request scanning is finished.
-    var onMessageComplete: () -> Void = {}
+    public var onMessageComplete: () -> Void = {}
 }
