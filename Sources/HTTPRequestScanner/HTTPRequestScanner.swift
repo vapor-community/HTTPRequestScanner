@@ -19,5 +19,5 @@ public struct HTTPRequestScanner {
     var onHeaderValue: (UnsafeBufferPointer<UInt8>) -> Void = {_ in}
     
     /// Called when the header scanning is finished.
-    var headersComplete: () -> Void = {}
+    var onHeadersComplete: () -> Void = {}
 }
