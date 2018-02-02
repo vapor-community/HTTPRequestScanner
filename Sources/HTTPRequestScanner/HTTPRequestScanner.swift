@@ -4,7 +4,7 @@ import Async
 public struct HTTPRequestScanner {
     
     /// The current location in the request that is being scanned.
-    private var state: State
+    private var state: State = .waiting
     
     /// Called on a data chunk scanned from the request's method.
     public var onMethod: (UnsafeBufferPointer<UInt8>) -> Void = {_ in}
